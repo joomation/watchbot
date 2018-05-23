@@ -707,7 +707,8 @@ button:focus {
 .page-2 {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     background-color: #f9f9f9;
     padding: 60px 0 0;
 }
@@ -1436,7 +1437,6 @@ button:focus {
 
 @media (max-aspect-ratio: 1/1) {
     .page-2 {
-        height: 100%;
     }
     .page-2 .dic-content {
         display: block;
@@ -1551,11 +1551,10 @@ button:focus {
     /*page-2*/
     .page-2 {
         padding: 60px 0 0;
-        height: 100%;
     }
     .page-2 .dic-content {
         display: block;
-        height: auto;
+        min-height: 100%;
     }
     .page-2 .image-wrap {
         position: relative;

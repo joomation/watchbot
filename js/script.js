@@ -124,7 +124,7 @@ function landingPage() {
 }
 //해당 페이지 도착 시 애니메이션
 function scrollActive(e) {
-  var html = document.body;
+  var html = document.documentElement?document.documentElement:document.body;
   var items = document.querySelectorAll('.dic');
   var header = document.querySelector('.header-wrap');
 
