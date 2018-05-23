@@ -124,11 +124,11 @@ function landingPage() {
 }
 //해당 페이지 도착 시 애니메이션
 function scrollActive(e) {
-  var html = document.documentElement?document.documentElement:document.body;
+  var windowScrollY = window.scrollY;
   var items = document.querySelectorAll('.dic');
   var header = document.querySelector('.header-wrap');
 
-  if (html.scrollTop > 10) {
+  if (windowScrollY > 10) {
     header.classList.add('active');
   } else {
     header.classList.remove('active');
@@ -136,7 +136,7 @@ function scrollActive(e) {
   for (var i = 0; i < items.length; i++) {
     var itemsOffset = items[i].offsetTop;
     var windowHeight = document.body.offsetHeight;
-    if (html.scrollTop > itemsOffset - windowHeight * 0.65) {
+    if (windowScrollY > itemsOffset - windowHeight * 0.65) {
       items[i].classList.add('active');
       if (i === 6) {
         watchbotState();
