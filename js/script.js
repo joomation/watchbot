@@ -1,7 +1,7 @@
-window.onscroll = function() { scrollActive() };
-window.addEventListener("resize", resizeElements);
 var swiper;
-window.onload = function () {
+window.addEventListener('scroll', scrollActive )
+window.addEventListener("resize", resizeElements);
+document.addEventListener("DOMContentLoaded", function(event) {
   watchbotBall();
   resizeElements();
   var loading = document.querySelector('.loading-wrap');
@@ -39,7 +39,7 @@ window.onload = function () {
       }
     }
   });
-};
+});
 document.querySelector('.scroll-down').addEventListener('click', function () {
   scrollPosition(
     document.querySelector('.page-2'),
@@ -124,7 +124,7 @@ function landingPage() {
 }
 //해당 페이지 도착 시 애니메이션
 function scrollActive(e) {
-  var html = document.documentElement;
+  var html = document.body;
   var items = document.querySelectorAll('.dic');
   var header = document.querySelector('.header-wrap');
 
