@@ -461,7 +461,6 @@ button:focus {
     color: #fff;
 }
 
-.page-1 .top-content {}
 
 .page-1 .top-content * {
     color: #fff;
@@ -519,7 +518,6 @@ button:focus {
     text-align: left;
 }
 
-.page-1 .middle-content02>div:nth-child(1) .bar-group {}
 
 .page-1 .middle-content02>div:nth-child(2) .bar-group {
     text-align: right;
@@ -695,6 +693,11 @@ button:focus {
     right: 0;
     margin: 0 auto;
     cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.scroll-down:hover {
+    opacity: 0.8;
 }
 
 .scroll-down i {
@@ -804,7 +807,6 @@ button:focus {
     padding: 60px 32px;
 }
 
-.page-4 .text-wrap {}
 
 .page-4 .text-wrap h2 {
     color: #fff;
@@ -910,7 +912,6 @@ button:focus {
     padding: 0 0px 60px;
 }
 
-.page-6 .swiper-wrapper {}
 
 .page-6 .swiper-slide .item {
     text-align: left;
@@ -955,8 +956,6 @@ button:focus {
     background-position: center;
 }
 
-.page-7 .text-wrap {}
-
 .page-7 .text-wrap h4 {
     color: #fff;
     font-size: 2rem;
@@ -987,10 +986,6 @@ button:focus {
     background-color: #f3f3f3;
     overflow: hidden;
 }
-
-.page-8 .text-wrap {}
-
-.page-8 .text-wrap .ic-group {}
 
 .page-8 .text-wrap .ic-group img {
     width: 230px;
@@ -1043,7 +1038,6 @@ button:focus {
     width: 100%;
 }
 
-.page-9 .team_profile-wrapper div {}
 
 .page-9 .team_profile-wrapper div h4 {
     text-align: left;
@@ -1088,7 +1082,6 @@ button:focus {
     font-weight: 400;
 }
 
-.div_footer_left {}
 
 .div_footer_right {
     text-align: right;
@@ -1238,7 +1231,6 @@ button:focus {
     h2 {
         font-size: 2.25rem;
     }
-    .page-1 {}
     .page-1 .top-content p {
         font-size: 2.25rem;
     }
@@ -1275,12 +1267,10 @@ button:focus {
     .bar-text {
         margin-top: 90px;
     }
-    .bar-text b {}
     .bar-chart .down .bar-info {
         left: -63px;
         top: -17px;
     }
-    .bar-chart .up .bar-info {}
     .bar-chart .default {
         left: 10px;
     }
@@ -1371,7 +1361,6 @@ button:focus {
         z-index: 8500;
         cursor: pointer;
     }
-    .nav-bar .active span {}
     .nav-bar span {
         position: absolute;
         display: block;
@@ -1437,7 +1426,7 @@ button:focus {
 
 @media (max-aspect-ratio: 1/1) {
     .page-2 {
-    height: auto;
+        height: auto;
     }
     .page-2 .dic-content {
         display: block;
@@ -1487,7 +1476,6 @@ button:focus {
         display: none;
     }
     /*page-1*/
-    .page-1 {}
     .page-1 .top-content p {
         font-size: 1.667rem;
     }
@@ -1580,8 +1568,7 @@ button:focus {
         width: 94px;
         height: 94px;
     }
-    .page-3 .image-wrap .box.green {}
-    .page-3 .image-wrap .box.red {}
+
     .page-3 .image-wrap {
         width: 100%;
         min-width: 330px;
@@ -1595,7 +1582,6 @@ button:focus {
         transform: scale(0.8);
     }
     /*page-5*/
-    .page-5 .image-wrap li {}
     .page-5 .image-wrap li:nth-child(2) {
         right: -13%;
     }
