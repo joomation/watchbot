@@ -1,4 +1,4 @@
-window.addEventListener("scroll", scrollActive);
+window.onscroll = function() { scrollActive() };
 window.addEventListener("resize", resizeElements);
 var swiper;
 window.onload = function () {
