@@ -1,7 +1,7 @@
 var swiper;
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive )
 window.addEventListener("resize", resizeElements);
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", function(event) {
   watchbotBall();
   resizeElements();
   var loading = document.querySelector('.loading-wrap');
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }, 300);
   setTimeout(function () {
     landingPage();
-  }, 600);
+  }, 700);
   //swiper
   swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
@@ -40,19 +40,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 });
-//2번째 페이지로 스크롤 애니메이션
 document.querySelector('.scroll-down').addEventListener('click', function () {
   scrollPosition(
     document.querySelector('.page-2'),
     400,
-    'easeOutQuad'
-  );
-});
-//맨 위로 스크롤 애니메이션
-document.querySelector('.scroll-up').addEventListener('click', function () {
-  scrollPosition(
-    document.querySelector('.page-1'),
-    1000,
     'easeOutQuad'
   );
 });
@@ -105,35 +96,32 @@ function outsideClick(target, e) {
 }
 //첫 랜딩페이지
 function landingPage() {
-  setTimeout(function () {
-    var downChart = new CountUp('downChart', 100, -46.18, 2, 1.5, countOptions);
-    if (!downChart.error) {
-      downChart.start();
-    } else {  
-      console.error(downChart.error);
-    }
-    var downText = new CountUp('downText', 99, 54, 0, 1.5, countOptions);
-    if (!downText.error) {
-      downText.start();
-    } else {  
-      console.error(downText.error);
-    }
-  }, 300);
-  setTimeout(function () {
-    var upChart = new CountUp('upChart', 100, 87.68, 2, 1.5, countOptions);
-    if (!upChart.error) {
-      upChart.start();
-    } else {  
-      console.error(upChart.error);
-    }
-    var upText = new CountUp('upText', 100, 188, 0, 1.5, countOptions);
-    if (!upText.error) {
-      upText.start();
-    } else {  
-      console.error(upText.error);
-    }
-  }, 1000)
 
+
+  var downChart = new CountUp('downChart', 100, -46.18, 2, 1.5, countOptions);
+  if (!downChart.error) {
+    downChart.start();
+  } else {  
+    console.error(downChart.error);
+  }
+  var downText = new CountUp('downText', 99, 54, 0, 1.5, countOptions);
+  if (!downText.error) {
+    downText.start();
+  } else {  
+    console.error(downText.error);
+  }
+  var upChart = new CountUp('upChart', 100, 87.68, 2, 1.5, countOptions);
+  if (!upChart.error) {
+    upChart.start();
+  } else {  
+    console.error(upChart.error);
+  }
+  var upText = new CountUp('upText', 100, 188, 0, 1.5, countOptions);
+  if (!upText.error) {
+    upText.start();
+  } else {  
+    console.error(upText.error);
+  }
 
 }
 //해당 페이지 도착 시 애니메이션
@@ -221,34 +209,31 @@ function scrollPosition(destination, duration = 200, easing, callback) {
 
   scroll();
 }
-var ballWidth = 40;
-
-function watchbotBall(count) {
+var ballWidth=40;
+function watchbotBall(count){
   ballAnimate(ballWidth);
-  setTimeout(function () {
+  setTimeout(function(){
     ballAnimate(0);
-  }, 700);
+  },700);
 }
-var myVar = setInterval(function () {
-  watchbotBall()
-}, 1400);
+var myVar = setInterval(function(){ watchbotBall() }, 1400);
 
-function ballAnimate(move) {
-
+function ballAnimate(move){
+  
   var svg = document.querySelector('.deco_blob');
   var svgGroup = document.querySelector('.blobs');
   var ball = document.querySelectorAll('.circle');
-  svg.style.width = ball.length * ballWidth + "px";
-  svgGroup.style.transform = "translateX(" + ball.length * ballWidth / 2 + "px)";
-  var center = Math.round(ball.length / 2) - 1;
-  for (var i = 0; i < ball.length; i++) {
-    if (i === center) {
-      ball[i].style.transform = "translate(0px)";
-    } else if (i < center) {
-      ball[i].style.transform = "translate(-" + move * (center - i) + "px)";
-    } else if (i > center) {
-      ball[i].style.transform = "translate(" + move * (i - center) + "px)";
+  svg.style.width=ball.length*ballWidth+"px";
+  svgGroup.style.transform = "translateX("+ball.length*ballWidth/2+"px)";
+  var center = Math.round(ball.length/2)-1;
+  for(var i=0; i<ball.length; i++){
+    if(i===center){
+      ball[i].style.transform="translate(0px)";
+    }else if(i<center){
+        ball[i].style.transform="translate(-"+move*(center-i)+"px)";
+    }else if(i>center){
+      ball[i].style.transform="translate("+move*(i-center)+"px)";
     }
-
+    
   }
 }
