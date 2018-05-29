@@ -4,15 +4,17 @@ window.addEventListener("resize", resizeElements);
 document.addEventListener("DOMContentLoaded", function (event) {
   watchbotBall();
   resizeElements();
-  var loading = document.querySelector('.loading-wrap');
-  loading.classList.add('hide');
+  setTimeout(function () {
+    var loading = document.querySelector('.loading-wrap');
+    loading.classList.add('hide');
+  },200)
   setTimeout(function () {
     var items = document.querySelectorAll('.dic');
     items[0].classList.add('active');
-  }, 300);
+  }, 500);
   setTimeout(function () {
     landingPage();
-  }, 600);
+  }, 800);
   //swiper
   swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
